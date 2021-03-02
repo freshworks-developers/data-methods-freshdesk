@@ -8,9 +8,14 @@ html {
   box-sizing: inherit;
 }
 
-.main {
+.main,
+.display-area {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column wrap;
   justify-content: center;
   align-items: center;
+}
+
+ul {
+  list-style-type: none;
 }
