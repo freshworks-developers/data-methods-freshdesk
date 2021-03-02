@@ -10,7 +10,7 @@ async function renderApp() {
 }
 
 function renderSidebar() {
-  const dataMethBtn = document.querySelector('.btn-ticket-details');
+  const dataMethBtn = document.querySelector('.btn-contact-details');
   dataMethBtn.addEventListener('fwClick', function getTktDetails() {
     /** ~ playground start of ticket details page ~ */
     /** ~  end ~ */
