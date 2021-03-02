@@ -14,7 +14,7 @@ function renderSidebar() {
   const displayArea = document.querySelector('.display-area');
   dataMethBtn.addEventListener('fwClick', function getTktDetails() {
     /** ~ playground start of ticket details page ~ */
-
+    
     // loggedInUser
     client.data
       .get('loggedInUser')
@@ -44,6 +44,7 @@ function renderSidebar() {
         displayArea.insertAdjacentHTML('afterend', `<br> The domain name is <mark>${domainName}</mark>`);
       })
       .catch(console.error);
+
     /** ~  end ~ */
   });
 }

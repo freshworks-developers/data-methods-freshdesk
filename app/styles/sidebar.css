@@ -10,7 +10,11 @@ html {
 
 .main {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   align-items: center;
+}
+
+ul {
+  list-style-type: none;
 }
