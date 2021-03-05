@@ -2,11 +2,14 @@ document.onreadystatechange = function () {
   if (document.readyState === 'interactive') renderApp();
 };
 
-async function renderApp() {
-  let _client = await app.initialized();
-  window['client'] = _client;
-  client.events.on('app.activated', renderSidebar);
-  return;
+function renderApp() {
+  app
+    .initialized()
+    .then((_client) => {
+      window['client'] = _client;
+      client.events.on('app.activated', renderSidebar);
+    })
+    .catch(console.error);
 }
 
 function renderSidebar() {

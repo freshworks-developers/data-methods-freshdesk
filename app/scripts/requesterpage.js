@@ -2,14 +2,17 @@ document.onreadystatechange = function () {
   if (document.readyState === 'interactive') renderApp();
 };
 
-async function renderApp() {
-  let _client = await app.initialized();
-  window['client'] = _client;
-  client.events.on('app.activated', renderSidebar);
-  return;
+function renderApp() {
+  app
+    .initialized()
+    .then((_client) => {
+      window['client'] = _client;
+      client.events.on('app.activated', renderUI);
+    })
+    .catch(console.error);
 }
 
-function renderSidebar() {
+function renderUI() {
   const dataMethBtn = document.querySelector('.btn-requester-page');
   dataMethBtn.addEventListener('fwClick', function getTktDetails() {
     /** ~ playground start of ticket details page ~ */
