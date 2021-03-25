@@ -14,6 +14,7 @@ function renderApp() {
 
 function renderSidebar() {
   const dataMethBtn = document.querySelector('.btn-ticket-details');
+  const space = document.querySelector('.space');
   dataMethBtn.addEventListener('fwClick', function getTktDetails() {
     /** ~ playground start of ticket details page ~ */
     /** ~  end ~ */
